@@ -101,7 +101,7 @@ class Config with ChangeNotifier {
       await save(time, rule);
       isLoading = false;
       showToast('更新成功');
-      NotificationListener();
+      notifyListeners();
     } catch (e) {
       showToast(e.toString());
     } finally {
